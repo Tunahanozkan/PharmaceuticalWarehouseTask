@@ -1,0 +1,24 @@
+﻿@model EntityLayer.Concrete.Stock
+
+@{
+    ViewData["Title"] = "UpdateStock";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h1>Stock Güncelleme Sayfası</h1>
+
+    <form method="post">
+        <input type="hidden" asp-for="StockId" />
+        <label>İlaç Adı</label>
+        <input type="text" class="form-control" asp-for="Medicine.Name" style="background-color:darkgray" readonly />
+        <br />
+        <label>İlaç Miktarı</label>
+        <input type="text" class="form-control" asp-for="Quantity" style="background-color:darkgray" />
+        <br />
+        <br />
+        <button class="btn btn-outline-primary">Güncelle</button>
+        <a href="/Stock/Index" class="btn btn-warning">Değişikliklerden Vazgeç</a>
+    </form>
+</div>
+

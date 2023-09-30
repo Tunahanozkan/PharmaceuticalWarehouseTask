@@ -1,0 +1,29 @@
+﻿@model EntityLayer.Concrete.Medicine
+@{
+    ViewData["Title"] = "MedicineDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <br />
+    <br />
+    <div class="card text-white bg-info mb-3" style="max-width: %100;">
+        <div class="card-header">İlaçlar</div>
+        <div class="card-body">
+            <h6 class="card-title"><strong>İlaç Detayları</strong></h6>
+            İlaç Adı: @Html.DisplayFor(x => x.Name)
+            <br />
+            İlaç Açıklaması: @Html.DisplayFor(x => x.Description)
+            <br />
+            İlaç Ücreti: @Html.DisplayFor(x => x.Price)
+            <br />
+            Son Kullanma Tarihi: @Html.DisplayFor(x => x.ExpiryDate)
+        </div>
+    </div>
+    <br />
+    <a href="/Medicine/Index" class="btn btn-warning">Geri Dön</a>
+</div>
+
+
+
+

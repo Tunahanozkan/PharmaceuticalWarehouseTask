@@ -1,0 +1,19 @@
+﻿@model RoleAddViewModel
+
+@{
+    ViewData["Title"] = "AddRole";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <form method="post">
+        <label>Rol Adı</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <br />
+        <button class="btn btn-success">Rolü Oluştur</button>
+        <a href="/Role/RoleList" class="btn btn-warning">Geri Gel</a>
+    </form>
+</div>

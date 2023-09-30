@@ -1,0 +1,28 @@
+﻿@model EntityLayer.Concrete.Medicine
+@{
+    ViewData["Title"] = "UpdateMedicine";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h1>İlaç Güncelleme Sayfası</h1>
+
+    <form method="post">
+        <input type="hidden" asp-for="MedicineId" />
+        <label>İlaç Adı</label>
+        <input type="text" class="form-control" asp-for="Name" style="background-color:darkgray" />
+        <br />
+        <label>İlaç Açıklama</label>
+        <input type="text" class="form-control" asp-for="Description" style="background-color:darkgray" />
+        <br />
+        <label>İlaç Ücreti</label>
+        <input asp-for="Price" class="form-control" type="text" style="background-color:darkgray" />
+        <label>Son Kullanma Tarihi</label>
+        <input type="date" asp-for="ExpiryDate" class="form-control" style="background-color:darkgray" />
+        <br />
+        <br />
+        <button class="btn btn-outline-primary">Güncelle</button>
+        <a href="/Medicine/Index" class="btn btn-warning">Değişikliklerden Vazgeç</a>
+    </form>
+</div>
+

@@ -1,0 +1,32 @@
+﻿@model List<EntityLayer.Concrete.Stock>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <br /><br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>İlaç Id</th>
+            <th>Miktarı</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.StockId</td>
+                <td>@item.Medicine.Name</td>
+                <td>@item.Quantity</td>
+                <td><a href="/Stock/DeleteStock/@item.StockId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Stock/UpdateStock/@item.StockId" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Stock/AddStock" class="btn btn-dark">İlaç Ekle</a>
+</div>
+    
+
